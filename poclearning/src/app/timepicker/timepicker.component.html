@@ -1,0 +1,54 @@
+<div class="col-md-12">
+    <div class="row">
+      <div class="custom-timpicker col-md-3 pl-0 ">
+      
+        <button   class=" " style="outline:none;border:none;background:none;padding: 0;">
+          <div class="position-relative">
+            <input type="text" class="form-control" disabled   (click)="somethingChanged($event)"  value="{{ dm }}{{colon}}{{sm}} {{msg}}">
+             <i  class="far fa-clock"   (click)="toggle = !toggle"  style="position: absolute;top: 12px;right: 7px; "></i>
+            </div>
+        </button>
+     
+      
+      <ul role="menu" class="datetime-popup dropdown-menu col-md-2" [ngClass]="{'menu-show' : toggle}" >
+        <li class="my-2 mx-2">
+        <div class="ng-untouched ng-pristine ng-valid">
+          
+          <table class="w-100">
+            <tbody><tr class="text-center">
+              <td>
+                <a class="btn btn-link" (click)="hourup()"><i class="fas fa-angle-up"></i></a></td><td>&nbsp;&nbsp;&nbsp;
+
+                </td>
+                <!----><td>
+                  <a class="btn btn-link" (click)="minup()"><i class="fas fa-angle-up"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td class="form-group">
+                      <input type="number"  class="form-control text-center bs-timepicker-field" placeholder="HH" (change)="onChangeEvent($event)"  [(ngModel)]="dm"
+              min="01" max="12"></td>
+              <td>&nbsp;:&nbsp;</td>
+              <td class="form-group">
+                <input type="number" class="form-control text-center bs-timepicker-field" placeholder="MM" (change)="onChangeEvent1($event)" [(ngModel)]="sm"
+              min="00" max="59"></td>
+              </tr>
+              <tr class="text-center">
+                <td><a class="btn btn-link" (click)="hourdown()"><i class="fas fa-angle-down"></i></a></td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td><a class="btn btn-link" (click)="mindown()"><i class="fas fa-angle-down"></i></a></td>
+              
+              </tr>
+            </tbody>
+          </table>
+          </div>
+          </li>
+          <li class="mx-2 mb-2"><span class="btn-group float-start"><button type="button" class="btn btn-secondary btn-sm" (click)="onItemSelectoram()" >AM</button><!----><button type="button" class="btn btn-secondary btn-sm" (click)="onItemSelectorpm()" >PM</button><!----></span><span class="btn-group float-end"><button type="button" class="btn btn-secondary btn-sm" (click)="toggle = !toggle">Close</button><!----></span>
+          </li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+       
+    </div>
+   
+    </div>
+   </div>

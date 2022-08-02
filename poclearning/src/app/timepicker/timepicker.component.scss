@@ -1,0 +1,13 @@
+.menu-show {
+    display: block;
+}
+.bs-timepicker-field::-webkit-outer-spin-button,
+.bs-timepicker-field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.bs-timepicker-field[type=number] {
+  -moz-appearance: textfield;
+}
