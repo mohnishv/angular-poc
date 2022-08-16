@@ -6,8 +6,34 @@
   -webkit-appearance: none;
   margin: 0;
 }
-
 /* Firefox */
 .bs-timepicker-field[type=number] {
   -moz-appearance: textfield;
+}
+.head-time {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 600;
+}
+.clock-btn{
+  outline:none;
+  border:none;
+  background:none;
+  padding: 0;
+  width: 100%;
+}
+.i-icon{
+  position: absolute;
+  top: 12px;
+  right: 7px;
+}
+.timepicker label {
+  font-weight: 600;
+  color: #0b1ed8;
+  padding-right: 6px;
+}
+.timepicker span {
+  font-weight: 500;
+  color: #555;
+  padding-left: 14px;
 }
