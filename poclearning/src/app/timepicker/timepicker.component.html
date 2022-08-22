@@ -1,6 +1,7 @@
 <div class="container-fluid">
   <div class="">
      <div class="head-time">Custom TimePicker</div>
+   
      <div class="custom-timpicker col-md-2 pl-0 mx-auto mt-5">
         <button   class="clock-btn " >
            <div class="position-relative">
@@ -11,6 +12,7 @@
         <ul role="menu" class="datetime-popup dropdown-menu col-md-2" [ngClass]="{'menu-show' : toggle}" >
            <li class="my-2 mx-2">
               <div class="ng-untouched ng-pristine ng-valid">
+              
                  <table class="w-100">
                     <tbody>
                        <tr class="text-center">
@@ -44,9 +46,9 @@
               </div>
            </li>
            <li class="mx-2 mb-2">
-            <span class="btn-group float-start">
-              <button type="button" class="btn btn-secondary btn-sm" (click)="onItemSelectoram()" >AM</button>
-              <button type="button" class="btn btn-secondary btn-sm" (click)="onItemSelectorpm()" >PM</button>
+            <span class="btn-group float-start" (click)="onButtonGroupClick($event)">
+              <button type="button" class="btn btn-secondary btn-sm" name="AM" (click)="onItemSelector($event)" >AM</button>
+              <button type="button" class="btn btn-secondary btn-sm" name="PM" (click)="onItemSelector($event)" >PM</button>
             </span><span class="btn-group float-end">
               <button type="button" class="btn btn-secondary btn-sm" (click)="toggle = !toggle">Close</button>
             </span>
@@ -55,10 +57,10 @@
      </div>
      <div class="col-md-12">
       <div class="text-center mt-2 mb-2"><button class="btn btn-primary" (click)="somethingChanged($event)">submit</button></div>
-      <div class="text-center timepicker">
+      <div class="text-center timepicker" *ngIf="isShown">
         <label>Time 12 hours format</label>:<span>{{convertedTime}}</span>
       </div>
-      <div class="text-center timepicker">
+      <div class="text-center timepicker" *ngIf="isShown">
         <label>Time 24 hours format</label>:<span>{{convertedTime1}}</span>
       </div>
      </div>
