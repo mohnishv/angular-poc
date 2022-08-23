@@ -35,7 +35,6 @@ export class TimepickerComponent implements OnInit {
 
   hourup(){
     
-    console.log(this.num1);
   if (this.num1 !== this.last1) {
     this.dm= ++this.num1;
     this.dm=this.padLeadingZeros(this.dm)
@@ -89,7 +88,6 @@ export class TimepickerComponent implements OnInit {
     }
      //function for AM Select
     onItemSelector(event: any) {
-      console.log(event.target.name);
       this.msg= event.target.name;
         return this.msg;
       
@@ -102,7 +100,7 @@ export class TimepickerComponent implements OnInit {
   onChangeEvent(event: any){
     
     
-    console.log(this.num1);
+    
     if (event.target.value >= 13) {
       event.target.value = 0;
       this.dm=0;
